@@ -5,27 +5,33 @@
   "author": "PatrickDeVries",
   "license": "MIT",
   "scripts": {
-    "dev": "parcel ./index.html",
-    "build": "parcel build --public-url . index.html"
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "format": "prettier --write .",
+    "lint:format": "prettier --check .",
+    "lint:code": "eslint . --max-warnings=0",
+    "lint:types": "tsc --noEmit",
+    "lint:all": "concurrently -g -c auto -n \"format,code,types\" \"yarn lint:format\" \"yarn lint:code\" \"yarn lint:types\""
   },
   "dependencies": {
     "@logseq/libs": "^0.0.15"
   },
   "devDependencies": {
-    "@parcel/core": "^2.10.2",
-    "@parcel/transformer-inline-string": "2.9.3",
     "@types/node": "20.9.0",
     "@typescript-eslint/eslint-plugin": "6.11.0",
     "@typescript-eslint/parser": "6.11.0",
+    "concurrently": "^8.2.2",
     "eslint": "8.53.0",
-    "parcel": "2.9.3",
+    "eslint-plugin-import": "^2.29.0",
     "prettier": "^3.1.0",
     "process": "^0.11.10",
-    "typescript": "5.2.2"
+    "typescript": "5.2.2",
+    "vite": "^4.5.0",
+    "vite-plugin-logseq": "^1.1.2"
   },
   "logseq": {
     "main": "dist/index.html",
-    "devEntry": "http://localhost:1234",
+    "devEntry": "http://localhost:5173",
     "icon": "./src/favicon.svg",
     "id": "_patrickdevries-logseq-plugin-colored-threads"
   },

@@ -1,0 +1,9 @@
+# dependencies
+.yarn
+node_modules
+
+# production
+dist
+
+# misc
+.vscode
