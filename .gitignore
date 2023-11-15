@@ -10,11 +10,8 @@
 !.yarn/sdks
 !.yarn/versions
 
-# testing
-/coverage
-
 # production
-/build
+dist
 
 # linting
 .lint-cache
@@ -29,5 +26,3 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-
-.parcel-cache
