@@ -13,7 +13,7 @@
     "lint:code": "eslint . --max-warnings=0",
     "lint:types": "tsc --noEmit",
     "lint:all": "concurrently -g -c auto -n \"format,code,types\" \"yarn lint:format\" \"yarn lint:code\" \"yarn lint:types\"",
-    "semantic-release": "semantic-release"
+    "semantic-release": "semantic-release --branches main"
   },
   "dependencies": {
     "@logseq/libs": "^0.0.15"
