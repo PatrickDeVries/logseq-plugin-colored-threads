@@ -1,9 +1,10 @@
 {
   "name": "logseq-plugin-colored-threads",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "A plugin for coloring threads",
   "author": "PatrickDeVries",
   "license": "MIT",
+  "main": "dist/index.html",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
@@ -30,8 +31,6 @@
     "vite-plugin-logseq": "^1.1.2"
   },
   "logseq": {
-    "main": "dist/index.html",
-    "devEntry": "http://localhost:5173",
     "icon": "./src/favicon.svg",
     "id": "_patrickdevries-logseq-plugin-colored-threads"
   },
