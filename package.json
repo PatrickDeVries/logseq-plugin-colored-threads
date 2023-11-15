@@ -1,6 +1,6 @@
 {
   "name": "logseq-plugin-colored-threads",
-  "version": "0.0.1",
+  "version": "0.0.0-development",
   "description": "A plugin for coloring threads",
   "author": "PatrickDeVries",
   "license": "MIT",
@@ -12,7 +12,8 @@
     "lint:format": "prettier --check .",
     "lint:code": "eslint . --max-warnings=0",
     "lint:types": "tsc --noEmit",
-    "lint:all": "concurrently -g -c auto -n \"format,code,types\" \"yarn lint:format\" \"yarn lint:code\" \"yarn lint:types\""
+    "lint:all": "concurrently -g -c auto -n \"format,code,types\" \"yarn lint:format\" \"yarn lint:code\" \"yarn lint:types\"",
+    "semantic-release": "semantic-release"
   },
   "dependencies": {
     "@logseq/libs": "^0.0.15"
@@ -26,6 +27,7 @@
     "eslint-plugin-import": "^2.29.0",
     "prettier": "^3.1.0",
     "process": "^0.11.10",
+    "semantic-release": "^22.0.7",
     "typescript": "5.2.2",
     "vite": "^4.5.0",
     "vite-plugin-logseq": "^1.1.2"
@@ -34,5 +36,9 @@
     "icon": "./src/logo.svg",
     "id": "_patrickdevries-logseq-plugin-colored-threads"
   },
-  "packageManager": "yarn@4.0.2"
+  "packageManager": "yarn@4.0.2",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/PatrickDeVries/logseq-plugin-colored-threads.git"
+  }
 }
