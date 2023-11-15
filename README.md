@@ -1,6 +1,12 @@
-# Logseq Plugin Colored Threads
+# Logseq Colored Threads
+
+<image src="./src/logo.svg" height="50px">
 
 Add thread coloring to your blocks in Logseq.
+
+## Example
+
+![Example image](./example.png)
 
 ## Issues
 
