@@ -1,6 +1,6 @@
 {
   "name": "logseq-plugin-colored-threads",
-  "version": "0.0.0-development",
+  "version": "0.0.1",
   "description": "A plugin for coloring threads",
   "author": "PatrickDeVries",
   "license": "MIT",
