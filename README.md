@@ -6,7 +6,11 @@ Add thread coloring to your blocks in Logseq.
 
 ## Example
 
-![Example image](./example.png)
+<image src="./example.png" alt="Example threads" style="background-color: black; padding: 1rem; border: 1px solid white; border-radius: 5px;">
+
+## Settings
+
+<image src="./settings.png" alt="Settings" style="background-color: black; padding: 1rem; border: 1px solid white; border-radius: 5px;">
 
 ## Issues
 

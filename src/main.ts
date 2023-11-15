@@ -3,7 +3,8 @@ import { logseq as PL } from '../package.json'
 
 const onSettingsChange = () => {
   const colors: string[] = logseq.settings?.colors.split(',')
-  const maxDepth = logseq.settings?.maxDepth
+  const maxDepth: number = logseq.settings?.maxDepth
+  const shouldFillBars: boolean = logseq.settings?.shouldFillBars
 
   const vars: [string, string][] = colors.map((color, i) => [
     `--block-thread-color-level-${i + 1}`,
@@ -11,6 +12,27 @@ const onSettingsChange = () => {
   ])
 
   const varsString = vars.map(pair => pair.join(': ') + ';').join('\n')
+
+  const fillBarsString = `
+    .block-children-left-border::after {
+      content: '';
+      position: absolute;
+      left: 2px;
+      height: 100%;
+      width: 30px;
+
+      opacity: .33;
+    }
+
+    ${Array.from(
+      { length: maxDepth },
+      (_, i) => `
+      ${Array.from({ length: i + 1 }, () => '.block-children').join(' ')}-left-border::after {
+        background-color: var(--block-thread-color-level-${(i % colors.length) + 1});
+      }
+  `,
+    ).join('\n')}
+  `
 
   const threadColorString = Array.from(
     { length: maxDepth },
@@ -30,6 +52,7 @@ const onSettingsChange = () => {
     style: `
     :root { ${varsString} }
     ${threadColorString}
+    ${shouldFillBars && fillBarsString}
     `,
   })
 }
@@ -37,24 +60,6 @@ const onSettingsChange = () => {
 const main = async () => {
   onSettingsChange()
   logseq.onSettingsChanged(onSettingsChange)
-
-  const appVersion = await logseq.App.getInfo('version')
-  if (appVersion) {
-    logseq.provideStyle({
-      key: PL.id + '-base',
-      style: `
-      .block-children-left-border::after {
-        content: '';
-        position: absolute;
-        left: 2px;
-        height: 100%;
-        width: 29px;
-
-        opacity: .33;
-      }
-    `,
-    })
-  }
 }
 
 logseq
@@ -65,6 +70,13 @@ logseq
       description: 'Comma-separated CSS colors to highlight threads from left to right.',
       title: 'Thread colors',
       type: 'string',
+    },
+    {
+      key: 'shouldFillBars',
+      default: true,
+      description: 'Whether or not to fill the thread bars',
+      title: 'Fill bars',
+      type: 'boolean',
     },
     {
       key: 'maxDepth',
