@@ -12,8 +12,7 @@
     "lint:format": "prettier --check .",
     "lint:code": "eslint . --max-warnings=0",
     "lint:types": "tsc --noEmit",
-    "lint:all": "concurrently -g -c auto -n \"format,code,types\" \"yarn lint:format\" \"yarn lint:code\" \"yarn lint:types\"",
-    "semantic-release": "semantic-release --branches main"
+    "lint:all": "concurrently -g -c auto -n \"format,code,types\" \"yarn lint:format\" \"yarn lint:code\" \"yarn lint:types\""
   },
   "dependencies": {
     "@logseq/libs": "^0.0.15"
@@ -27,7 +26,6 @@
     "eslint-plugin-import": "^2.29.0",
     "prettier": "^3.1.0",
     "process": "^0.11.10",
-    "semantic-release": "^22.0.7",
     "typescript": "5.2.2",
     "vite": "^4.5.0",
     "vite-plugin-logseq": "^1.1.2"
