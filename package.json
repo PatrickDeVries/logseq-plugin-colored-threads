@@ -4,7 +4,7 @@
   "description": "A plugin for coloring threads",
   "author": "PatrickDeVries",
   "license": "MIT",
-  "main": "dist/index.html",
+  "main": "./index.html",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
