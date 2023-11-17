@@ -27,7 +27,7 @@ const onSettingsChange = () => {
     ${Array.from(
       { length: maxDepth },
       (_, i) => `
-      ${Array.from({ length: i + 1 }, () => '.block-children').join(' ')}-left-border::after {
+      .ls-block[level="${i + 1}"] .block-children-left-border::after {
         background-color: var(--block-thread-color-level-${(i % colors.length) + 1});
       }
   `,
@@ -37,11 +37,11 @@ const onSettingsChange = () => {
   const threadColorString = Array.from(
     { length: maxDepth },
     (_, i) => `
-    ${Array.from({ length: i + 1 }, () => '.block-children').join(' ')} {
+    .ls-block[level="${i + 1}"] .block-children {
       border-left-color: var(--block-thread-color-level-${(i % colors.length) + 1});
     }
 
-    ${Array.from({ length: i + 1 }, () => '.block-children').join(' ')}-left-border::after {
+    .ls-block[level="${i + 1}"] .block-children-left-border::after {
       background-color: var(--block-thread-color-level-${(i % colors.length) + 1});
     }
 `,
