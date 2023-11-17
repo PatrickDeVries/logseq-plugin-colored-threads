@@ -5,55 +5,81 @@ const onSettingsChange = () => {
   const colors: string[] = logseq.settings?.colors.split(',')
   const maxDepth: number = logseq.settings?.maxDepth
   const shouldFillBars: boolean = logseq.settings?.shouldFillBars
+  const shouldColorBullets: boolean = logseq.settings?.shouldColorBullets
+
+  let providedStyles: string
 
   const vars: [string, string][] = colors.map((color, i) => [
     `--block-thread-color-level-${i + 1}`,
     color,
   ])
-
   const varsString = vars.map(pair => pair.join(': ') + ';').join('\n')
+  providedStyles = `:root { ${varsString} }`
 
-  const fillBarsString = `
-    .block-children-left-border::after {
-      content: '';
-      position: absolute;
-      left: 2px;
-      height: 100%;
-      width: 30px;
+  const threadColorStyles = Array.from(
+    { length: maxDepth },
+    (_, i) => `
+      .ls-block[level="${i + 1}"] .block-children {
+        border-left-color: var(--block-thread-color-level-${(i % colors.length) + 1});
+      }
 
-      opacity: .33;
-    }
-
-    ${Array.from(
-      { length: maxDepth },
-      (_, i) => `
       .ls-block[level="${i + 1}"] .block-children-left-border::after {
         background-color: var(--block-thread-color-level-${(i % colors.length) + 1});
       }
-  `,
-    ).join('\n')}
+    `,
+  ).join('\n')
+  providedStyles = `
+    ${providedStyles}
+    ${threadColorStyles}
   `
 
-  const threadColorString = Array.from(
-    { length: maxDepth },
-    (_, i) => `
-    .ls-block[level="${i + 1}"] .block-children {
-      border-left-color: var(--block-thread-color-level-${(i % colors.length) + 1});
-    }
+  if (shouldFillBars) {
+    const fillBarsStyles = `
+      .block-children-left-border::after {
+        content: '';
+        position: absolute;
+        left: 2px;
+        height: 100%;
+        width: 30px;
 
-    .ls-block[level="${i + 1}"] .block-children-left-border::after {
-      background-color: var(--block-thread-color-level-${(i % colors.length) + 1});
-    }
-`,
-  ).join('\n')
+        opacity: .33;
+      }
+
+      ${Array.from(
+        { length: maxDepth },
+        (_, i) => `
+          .ls-block[level="${i + 1}"] .block-children-left-border::after {
+            background-color: var(--block-thread-color-level-${(i % colors.length) + 1});
+          }
+        `,
+      ).join('\n')}
+    `
+    providedStyles = `
+      ${providedStyles}
+      ${fillBarsStyles}
+    `
+  }
+
+  if (shouldColorBullets) {
+    const colorBulletsStyles = `
+      ${Array.from(
+        { length: maxDepth },
+        (_, i) => `
+          .ls-block[level="${i + 1}"] .bullet-container .bullet {
+            background-color: var(--block-thread-color-level-${(i % colors.length) + 1});
+          }
+        `,
+      ).join('\n')}
+    `
+    providedStyles = `
+      ${providedStyles}
+      ${colorBulletsStyles}
+    `
+  }
 
   logseq.provideStyle({
     key: PL.id + '-threads',
-    style: `
-    :root { ${varsString} }
-    ${threadColorString}
-    ${shouldFillBars && fillBarsString}
-    `,
+    style: providedStyles,
   })
 }
 
@@ -76,6 +102,13 @@ logseq
       default: true,
       description: 'Whether or not to fill the thread bars',
       title: 'Fill bars',
+      type: 'boolean',
+    },
+    {
+      key: 'shouldColorBullets',
+      default: true,
+      description: 'Whether or not to color bullets',
+      title: 'Color bullets',
       type: 'boolean',
     },
     {
