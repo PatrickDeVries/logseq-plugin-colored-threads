@@ -31,7 +31,7 @@
     "vite-plugin-logseq": "^1.1.2"
   },
   "logseq": {
-    "icon": "./src/logo.svg",
+    "icon": "./logo.svg",
     "id": "_patrickdevries-logseq-plugin-colored-threads"
   },
   "packageManager": "yarn@4.0.2",
