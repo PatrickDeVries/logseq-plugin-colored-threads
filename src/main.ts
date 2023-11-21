@@ -4,6 +4,7 @@ import { logseq as PL } from '../package.json'
 const onSettingsChange = () => {
   const colors: string[] = logseq.settings?.colors.split(',')
   const maxDepth: number = logseq.settings?.maxDepth
+  const shouldColorThreads: boolean = logseq.settings?.shouldColorThreads
   const shouldFillBars: boolean = logseq.settings?.shouldFillBars
   const shouldColorBullets: boolean = logseq.settings?.shouldColorBullets
 
@@ -16,26 +17,24 @@ const onSettingsChange = () => {
   const varsString = vars.map(pair => pair.join(': ') + ';').join('\n')
   providedStyles = `:root { ${varsString} }`
 
-  const threadColorStyles = Array.from(
-    { length: maxDepth },
-    (_, i) => `
-      .ls-block[level="${i + 1}"] .block-children {
+  if (shouldColorThreads) {
+    const threadColorStyles = Array.from(
+      { length: maxDepth },
+      (_, i) => `
+      .ls-block[level="${i + 1}"] > .block-children-container > .block-children {
         border-left-color: var(--block-thread-color-level-${(i % colors.length) + 1});
       }
-
-      .ls-block[level="${i + 1}"] .block-children-left-border::after {
-        background-color: var(--block-thread-color-level-${(i % colors.length) + 1});
-      }
     `,
-  ).join('\n')
-  providedStyles = `
+    ).join('\n')
+    providedStyles = `
     ${providedStyles}
     ${threadColorStyles}
-  `
+    `
+  }
 
   if (shouldFillBars) {
     const fillBarsStyles = `
-      .block-children-left-border::after {
+      .block-children-left-border::before {
         content: '';
         position: absolute;
         left: 2px;
@@ -48,7 +47,9 @@ const onSettingsChange = () => {
       ${Array.from(
         { length: maxDepth },
         (_, i) => `
-          .ls-block[level="${i + 1}"] .block-children-left-border::after {
+          .ls-block[level="${
+            i + 1
+          }"] > .block-children-container > .block-children-left-border::before {
             background-color: var(--block-thread-color-level-${(i % colors.length) + 1});
           }
         `,
@@ -78,7 +79,7 @@ const onSettingsChange = () => {
   }
 
   logseq.provideStyle({
-    key: PL.id + '-threads',
+    key: PL.id,
     style: providedStyles,
   })
 }
@@ -96,6 +97,13 @@ logseq
       description: 'Comma-separated CSS colors to highlight threads from left to right.',
       title: 'Thread colors',
       type: 'string',
+    },
+    {
+      key: 'shouldColorThreads',
+      default: true,
+      description: 'Whether or not to color threads',
+      title: 'Color threads',
+      type: 'boolean',
     },
     {
       key: 'shouldFillBars',
