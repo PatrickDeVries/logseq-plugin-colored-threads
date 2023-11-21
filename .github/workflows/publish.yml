@@ -15,20 +15,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
-    - name: Set Node.js 20.x
-      uses: actions/setup-node@v3
+    - name: Set Bun 1.0.x
+      uses: oven-sh/setup-bun@v1
       with:
-        node-version: 20.x
+        bun-version: 1.0.x
 
     - name: Run install
-      uses: borales/actions-yarn@v4.2.0
-      with:
-        cmd: install # will run `yarn install` command
+      id: install
+      run: bun install
 
     - name: Build package bundle
-      uses: borales/actions-yarn@v4.2.0
-      with:
-        cmd: build # will run `yarn build` command
+      id: build
+      run: bun build
       
     - name: Zip build
       id: zip
