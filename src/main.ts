@@ -34,12 +34,12 @@ const onSettingsChange = () => {
 
   if (shouldFillBars) {
     const fillBarsStyles = `
-      .block-children-left-border::before {
+      .block-children::before {
         content: '';
         position: absolute;
-        left: 2px;
+        top: 0;
         height: 100%;
-        width: 30px;
+        width: 29px;
 
         opacity: .33;
       }
@@ -49,7 +49,7 @@ const onSettingsChange = () => {
         (_, i) => `
           .ls-block[level="${
             i + 1
-          }"] > .block-children-container > .block-children-left-border::before {
+          }"] > .block-children-container > .block-children::before {
             background-color: var(--block-thread-color-level-${(i % colors.length) + 1});
           }
         `,
