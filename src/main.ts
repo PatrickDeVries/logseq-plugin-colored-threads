@@ -24,6 +24,10 @@ const onSettingsChange = () => {
       .ls-block[level="${i + 1}"] > .block-children-container > .block-children {
         border-left-color: var(--block-thread-color-level-${(i % colors.length) + 1});
       }
+      
+      .ls-block[level="${i + 1}"] > .block-children-container > .block-children-left-border:hover {
+        background-color: var(--block-thread-color-level-${(i % colors.length) + 1});
+      }
     `,
     ).join('\n')
     providedStyles = `
