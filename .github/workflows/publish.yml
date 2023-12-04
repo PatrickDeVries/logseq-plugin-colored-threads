@@ -31,7 +31,7 @@ jobs:
         id: zip
         run: |
           mv dist ${{ env.PLUGIN_NAME }}
-          cp example.png settings.png logo.svg README.md package.json ${{ env.PLUGIN_NAME }}
+          cp example.png doc-mode-example.png settings.png logo.svg README.md package.json ${{ env.PLUGIN_NAME }}
           zip -r ${{ env.PLUGIN_NAME }}.zip ${{ env.PLUGIN_NAME }}
           tar -cvzf ${{ env.PLUGIN_NAME }}.tgz ${{ env.PLUGIN_NAME }}
           ls        

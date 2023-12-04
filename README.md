@@ -1,10 +1,18 @@
 # Logseq Colored Threads
 
-Add thread coloring to your blocks in Logseq.
+Add thread coloring to your blocks in Logseq!
 
-## Example
+> Color threads, highlight indentation, and color bullets to see hierarchies easier.
+
+## Examples
+
+### Default mode
 
 ![Example threads](./example.png)
+
+### Document mode (optional)
+
+![Example document mode threads](./doc-mode-example.png)
 
 ## Settings
 
