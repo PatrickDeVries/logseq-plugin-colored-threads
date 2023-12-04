@@ -59,7 +59,7 @@ const onSettingsChange = () => {
       }
       
       .content.doc-mode .block-children::after {
-        left: 11px;
+        left: 12px;
       }
 
       .block-children-container > .block-children {
@@ -67,7 +67,7 @@ const onSettingsChange = () => {
       }
 
       .content.doc-mode .block-children-container > .block-children-left-border {
-        left: 10px;
+        left: 11px;
       }
 
       ${Array.from(
