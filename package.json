@@ -12,22 +12,21 @@
     "lint:format": "prettier --check .",
     "lint:code": "eslint . --max-warnings=0",
     "lint:types": "tsc --noEmit",
-    "lint:all": "concurrently -g -c auto -n \"format,code,types\" \"bun lint:format\" \"bun lint:code\" \"bun lint:types\""
+    "lint": "concurrently -g -c auto -n \"format,code,types\" \"bun lint:format\" \"bun lint:code\" \"bun lint:types\""
   },
   "dependencies": {
     "@logseq/libs": "^0.0.15"
   },
   "devDependencies": {
-    "@types/node": "20.9.0",
-    "@typescript-eslint/eslint-plugin": "6.11.0",
-    "@typescript-eslint/parser": "6.11.0",
+    "@typescript-eslint/eslint-plugin": "6.15.0",
+    "@typescript-eslint/parser": "6.15.0",
+    "bun-types": "^1.0.20",
     "concurrently": "^8.2.2",
-    "eslint": "8.53.0",
-    "eslint-plugin-import": "^2.29.0",
-    "prettier": "^3.1.0",
+    "eslint": "8.56.0",
+    "eslint-plugin-import": "^2.29.1",
+    "prettier": "^3.1.1",
     "process": "^0.11.10",
-    "typescript": "5.2.2",
-    "vite": "^4.5.0",
+    "vite": "^5.0.10",
     "vite-plugin-logseq": "^1.1.2"
   },
   "logseq": {

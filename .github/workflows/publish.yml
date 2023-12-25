@@ -24,6 +24,9 @@ jobs:
       - name: Install dependencies
         run: bun install
 
+      - name: Lint package
+        run: bun lint
+
       - name: Build package bundle
         run: bun run build
 
