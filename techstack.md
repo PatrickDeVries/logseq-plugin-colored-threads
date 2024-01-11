@@ -3,7 +3,6 @@
 ## Tech Stack
 PatrickDeVries/logseq-plugin-colored-threads is built on the following main stack:
 
-- [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - [TypeScript](http://www.typescriptlang.org) – Languages
 - [ESLint](http://eslint.org/) – Code Review
@@ -19,7 +18,6 @@ Full tech stack [here](/techstack.md)
 ## Tech Stack
 PatrickDeVries/logseq-plugin-colored-threads is built on the following main stack:
 
-- <img width='25' height='25' src='https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png' alt='Node.js'/> [Node.js](http://nodejs.org/) – Frameworks (Full Stack)
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1612/bynNY5dJ.jpg' alt='TypeScript'/> [TypeScript](http://www.typescriptlang.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
@@ -36,7 +34,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [PatrickDeVries/logseq-plugin-colored-threads](https://github.com/PatrickDeVries/logseq-plugin-colored-threads)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|16<br/>Tools used|01/05/24 <br/>Report generated|
+|14<br/>Tools used|01/11/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -54,19 +52,6 @@ Full tech stack [here](/techstack.md)
   <img width='36' height='36' src='https://img.stackshare.io/service/1612/bynNY5dJ.jpg' alt='TypeScript'>
   <br>
   <sub><a href="http://www.typescriptlang.org">TypeScript</a></sub>
-  <br>
-  <sub></sub>
-</td>
-
-</tr>
-</table>
-
-## <img src='https://img.stackshare.io/frameworks.svg'/> Frameworks (1)
-<table><tr>
-  <td align='center'>
-  <img width='36' height='36' src='https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png' alt='Node.js'>
-  <br>
-  <sub><a href="http://nodejs.org/">Node.js</a></sub>
   <br>
   <sub></sub>
 </td>
@@ -105,7 +90,7 @@ Full tech stack [here](/techstack.md)
   <br>
   <sub><a href="https://prettier.io/">Prettier</a></sub>
   <br>
-  <sub>v3.1.0</sub>
+  <sub>v3.1.1</sub>
 </td>
 
 <td align='center'>
@@ -128,19 +113,18 @@ Full tech stack [here](/techstack.md)
 </table>
 
 
-## <img src='https://img.stackshare.io/group.svg' /> Open source packages (7)</h2>
+## <img src='https://img.stackshare.io/group.svg' /> Open source packages (6)</h2>
 
-## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (7)
+## <img width='24' height='24' src='https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png'/> npm (6)
 
 |NAME|VERSION|LAST UPDATED|LAST UPDATED BY|LICENSE|VULNERABILITIES|
 |:------|:------|:------|:------|:------|:------|
-|[@types/node](https://www.npmjs.com/@types/node)|v20.9.0|11/28/23|Patrick DeVries |MIT|N/A|
-|[@typescript-eslint/eslint-plugin](https://www.npmjs.com/@typescript-eslint/eslint-plugin)|v6.11.0|11/28/23|Patrick DeVries |MIT|N/A|
-|[@typescript-eslint/parser](https://www.npmjs.com/@typescript-eslint/parser)|v6.11.0|11/28/23|Patrick DeVries |BSD-2-Clause|N/A|
-|[concurrently](https://www.npmjs.com/concurrently)|v8.2.2|11/28/23|Patrick DeVries |MIT|N/A|
-|[eslint-plugin-import](https://www.npmjs.com/eslint-plugin-import)|v2.29.0|11/28/23|Patrick DeVries |MIT|N/A|
+|[@typescript-eslint/eslint-plugin](https://www.npmjs.com/@typescript-eslint/eslint-plugin)|v6.15.0|12/25/23|Patrick DeVries |MIT|N/A|
+|[@typescript-eslint/parser](https://www.npmjs.com/@typescript-eslint/parser)|v6.15.0|12/25/23|Patrick DeVries |BSD-2-Clause|N/A|
+|[concurrently](https://www.npmjs.com/concurrently)|v8.2.2|12/25/23|Patrick DeVries |MIT|N/A|
+|[eslint-plugin-import](https://www.npmjs.com/eslint-plugin-import)|v2.29.1|12/25/23|Patrick DeVries |MIT|N/A|
 |[process](https://www.npmjs.com/process)|v0.11.10|11/14/23|Patrick DeVries |MIT|N/A|
-|[vite](https://www.npmjs.com/vite)|v4.5.0|11/15/23|Patrick DeVries |N/A|[CVE-2023-49293](https://github.com/advisories/GHSA-92r3-m2mg-pj97) (Moderate)|
+|[vite](https://www.npmjs.com/vite)|v5.0.10|12/25/23|Patrick DeVries |N/A|N/A|
 
 <br/>
 <div align='center'>
