@@ -2,11 +2,11 @@ repo_name: PatrickDeVries/logseq-plugin-colored-threads
 report_id: e6042238d2f91f3f5e27856633c6a921
 version: 0.1
 repo_type: Public
-timestamp: '2024-01-05T09:23:49+00:00'
+timestamp: '2024-01-11T12:16:58+00:00'
 requested_by: PatrickDeVries
 provider: github
 branch: main
-detected_tools_count: 16
+detected_tools_count: 14
 tools:
 - name: JavaScript
   description: Lightweight, interpreted, object-oriented language with first-class
@@ -30,19 +30,6 @@ tools:
   image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
   detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads
   detection_source: Repo Metadata
-- name: Node.js
-  description: A platform built on Chrome's JavaScript runtime for easily building
-    fast, scalable network applications
-  website_url: http://nodejs.org/
-  open_source: true
-  hosted_saas: false
-  category: Languages & Frameworks
-  sub_category: Frameworks (Full Stack)
-  image_url: https://img.stackshare.io/service/1011/n1JRsFeB_400x400.png
-  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
-  detection_source: package.json
-  last_updated_by: Patrick DeVries
-  last_updated_on: 2023-11-14 22:33:20.000000000 Z
 - name: ESLint
   description: The fully pluggable JavaScript code quality tool
   website_url: http://eslint.org/
@@ -74,14 +61,14 @@ tools:
   category: Build, Test, Deploy
   sub_category: Continuous Integration
   image_url: https://img.stackshare.io/service/11563/actions.png
-  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/.github/workflows/publish.yml
-  detection_source: ".github/workflows/publish.yml"
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/.github/workflows/lint-and-build.yml
+  detection_source: ".github/workflows/lint-and-build.yml"
   last_updated_by: Patrick DeVries
-  last_updated_on: 2023-11-21 00:15:55.000000000 Z
+  last_updated_on: 2023-12-25 02:41:10.000000000 Z
 - name: Prettier
   description: 'Prettier is an opinionated code formatter. '
   website_url: https://prettier.io/
-  version: 3.1.0
+  version: 3.1.1
   license: MIT
   open_source: true
   hosted_saas: false
@@ -91,7 +78,7 @@ tools:
   detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
   detection_source: package.json
   last_updated_by: Patrick DeVries
-  last_updated_on: 2023-11-15 03:59:03.000000000 Z
+  last_updated_on: 2023-12-25 02:41:10.000000000 Z
 - name: Vite
   description: Native-ESM powered web dev build tool
   website_url: https://vitejs.dev/
@@ -117,24 +104,10 @@ tools:
   detection_source: package.json
   last_updated_by: Patrick DeVries
   last_updated_on: 2023-11-14 22:33:20.000000000 Z
-- name: "@types/node"
-  description: TypeScript definitions for Node.js
-  package_url: https://www.npmjs.com/@types/node
-  version: 20.9.0
-  license: MIT
-  open_source: true
-  hosted_saas: false
-  category: Libraries
-  sub_category: npm Packages
-  image_url: https://img.stackshare.io/package/15809/default_5e5e8ac63beda29f31f1844df64d4b8247570a66.png
-  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
-  detection_source: package.json
-  last_updated_by: Patrick DeVries
-  last_updated_on: 2023-11-28 03:57:54.000000000 Z
 - name: "@typescript-eslint/eslint-plugin"
   description: TypeScript plugin for ESLint
   package_url: https://www.npmjs.com/@typescript-eslint/eslint-plugin
-  version: 6.11.0
+  version: 6.15.0
   license: MIT
   open_source: true
   hosted_saas: false
@@ -144,11 +117,11 @@ tools:
   detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
   detection_source: package.json
   last_updated_by: Patrick DeVries
-  last_updated_on: 2023-11-28 03:57:54.000000000 Z
+  last_updated_on: 2023-12-25 02:53:26.000000000 Z
 - name: "@typescript-eslint/parser"
   description: An ESLint custom parser which leverages TypeScript ESTree
   package_url: https://www.npmjs.com/@typescript-eslint/parser
-  version: 6.11.0
+  version: 6.15.0
   license: BSD-2-Clause
   open_source: true
   hosted_saas: false
@@ -158,7 +131,7 @@ tools:
   detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
   detection_source: package.json
   last_updated_by: Patrick DeVries
-  last_updated_on: 2023-11-28 03:57:54.000000000 Z
+  last_updated_on: 2023-12-25 02:53:26.000000000 Z
 - name: concurrently
   description: Run commands concurrently
   package_url: https://www.npmjs.com/concurrently
@@ -172,11 +145,11 @@ tools:
   detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
   detection_source: package.json
   last_updated_by: Patrick DeVries
-  last_updated_on: 2023-11-28 03:57:54.000000000 Z
+  last_updated_on: 2023-12-25 02:41:10.000000000 Z
 - name: eslint-plugin-import
   description: Import with sanity
   package_url: https://www.npmjs.com/eslint-plugin-import
-  version: 2.29.0
+  version: 2.29.1
   license: MIT
   open_source: true
   hosted_saas: false
@@ -186,7 +159,7 @@ tools:
   detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
   detection_source: package.json
   last_updated_by: Patrick DeVries
-  last_updated_on: 2023-11-28 03:57:54.000000000 Z
+  last_updated_on: 2023-12-25 02:41:10.000000000 Z
 - name: process
   description: Process information for node.js and browsers
   package_url: https://www.npmjs.com/process
@@ -204,7 +177,7 @@ tools:
 - name: vite
   description: Native-ESM powered web dev build tool
   package_url: https://www.npmjs.com/vite
-  version: 4.5.0
+  version: 5.0.10
   open_source: false
   hosted_saas: false
   category: Build, Test, Deploy
@@ -213,11 +186,4 @@ tools:
   detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
   detection_source: package.json
   last_updated_by: Patrick DeVries
-  last_updated_on: 2023-11-15 04:47:08.000000000 Z
-  vulnerabilities:
-  - name: Vite XSS vulnerability in `server.transformIndexHtml` via URL payload
-    cve_id: CVE-2023-49293
-    cve_url: https://github.com/advisories/GHSA-92r3-m2mg-pj97
-    detected_date: Dec 6
-    severity: moderate
-    first_patched: 4.5.1
+  last_updated_on: 2023-12-25 02:41:10.000000000 Z
