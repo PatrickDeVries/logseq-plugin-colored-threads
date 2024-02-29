@@ -1,0 +1,197 @@
+repo_name: PatrickDeVries/logseq-plugin-colored-threads
+report_id: e6042238d2f91f3f5e27856633c6a921
+version: 0.1
+repo_type: Public
+timestamp: '2024-02-29T18:04:29+00:00'
+requested_by: PatrickDeVries
+provider: github
+branch: main
+detected_tools_count: 14
+tools:
+- name: JavaScript
+  description: Lightweight, interpreted, object-oriented language with first-class
+    functions
+  website_url: https://developer.mozilla.org/en-US/docs/Web/JavaScript
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1209/javascript.jpeg
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads
+  detection_source: Repo Metadata
+- name: TypeScript
+  description: A superset of JavaScript that compiles to clean JavaScript output
+  website_url: http://www.typescriptlang.org
+  license: Apache-2.0
+  open_source: true
+  hosted_saas: false
+  category: Languages & Frameworks
+  sub_category: Languages
+  image_url: https://img.stackshare.io/service/1612/bynNY5dJ.jpg
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads
+  detection_source: Repo Metadata
+- name: ESLint
+  description: The fully pluggable JavaScript code quality tool
+  website_url: http://eslint.org/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/3337/Q4L7Jncy.jpg
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Patrick DeVries
+  last_updated_on: 2023-11-14 22:33:20.000000000 Z
+- name: Git
+  description: Fast, scalable, distributed revision control system
+  website_url: http://git-scm.com/
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Version Control System
+  image_url: https://img.stackshare.io/service/1046/git.png
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads
+  detection_source: Repo Metadata
+- name: GitHub Actions
+  description: Automate your workflow from idea to production
+  website_url: https://github.com/features/actions
+  open_source: false
+  hosted_saas: true
+  category: Build, Test, Deploy
+  sub_category: Continuous Integration
+  image_url: https://img.stackshare.io/service/11563/actions.png
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/.github/workflows/lint-and-build.yml
+  detection_source: ".github/workflows/lint-and-build.yml"
+  last_updated_by: Patrick DeVries
+  last_updated_on: 2023-12-25 02:41:10.000000000 Z
+- name: Prettier
+  description: Prettier is an opinionated code formatter.
+  website_url: https://prettier.io/
+  version: 3.1.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Code Review
+  image_url: https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Patrick DeVries
+  last_updated_on: 2023-12-25 02:41:10.000000000 Z
+- name: Vite
+  description: Native-ESM powered web dev build tool
+  website_url: https://vitejs.dev/
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: JS Build Tools / JS Task Runners
+  image_url: https://img.stackshare.io/service/21547/default_1aeac791cde11ff66cc0b20dcc6144eeb185c905.png
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Patrick DeVries
+  last_updated_on: 2023-11-14 22:33:20.000000000 Z
+- name: npm
+  description: The package manager for JavaScript.
+  website_url: https://www.npmjs.com/
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Front End Package Manager
+  image_url: https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Patrick DeVries
+  last_updated_on: 2023-11-14 22:33:20.000000000 Z
+- name: "@typescript-eslint/eslint-plugin"
+  description: TypeScript plugin for ESLint
+  package_url: https://www.npmjs.com/@typescript-eslint/eslint-plugin
+  version: 6.15.0
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15982/default_8b5680d4e916298d08363c291a0d6e34c07ceb15.png
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Patrick DeVries
+  last_updated_on: 2023-12-25 02:53:26.000000000 Z
+- name: "@typescript-eslint/parser"
+  description: An ESLint custom parser which leverages TypeScript ESTree
+  package_url: https://www.npmjs.com/@typescript-eslint/parser
+  version: 6.15.0
+  license: BSD-2-Clause
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15980/default_732016a20524708efe7a4c77497fe9bfeea19ba6.png
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Patrick DeVries
+  last_updated_on: 2023-12-25 02:53:26.000000000 Z
+- name: concurrently
+  description: Run commands concurrently
+  package_url: https://www.npmjs.com/concurrently
+  version: 8.2.2
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/16041/default_5fd43aeff4d6a935abc13737de01a0355210499d.png
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Patrick DeVries
+  last_updated_on: 2023-12-25 02:41:10.000000000 Z
+- name: eslint-plugin-import
+  description: Import with sanity
+  package_url: https://www.npmjs.com/eslint-plugin-import
+  version: 2.29.1
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/15806/default_98aa227f51aa9d787815ec3fd98d0ab2bfebbb91.png
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Patrick DeVries
+  last_updated_on: 2023-12-25 02:41:10.000000000 Z
+- name: process
+  description: Process information for node.js and browsers
+  package_url: https://www.npmjs.com/process
+  version: 0.11.10
+  license: MIT
+  open_source: true
+  hosted_saas: false
+  category: Libraries
+  sub_category: npm Packages
+  image_url: https://img.stackshare.io/package/17866/default_99a4718ac3f2beccb28962b727b0a38010c9b496.png
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Patrick DeVries
+  last_updated_on: 2023-11-14 22:33:20.000000000 Z
+- name: vite
+  description: Native-ESM powered web dev build tool
+  package_url: https://www.npmjs.com/vite
+  version: 5.0.10
+  open_source: false
+  hosted_saas: false
+  category: Build, Test, Deploy
+  sub_category: Package Managers
+  image_url: https://img.stackshare.io/package/npm/image.png
+  detection_source_url: https://github.com/PatrickDeVries/logseq-plugin-colored-threads/blob/main/package.json
+  detection_source: package.json
+  last_updated_by: Patrick DeVries
+  last_updated_on: 2023-12-25 02:41:10.000000000 Z
+  vulnerabilities:
+  - name: Vite dev server option `server.fs.deny` can be bypassed when hosted on case-insensitive
+      filesystem
+    cve_id: CVE-2024-23331
+    cve_url: https://github.com/advisories/GHSA-c24v-8rfc-w8vw
+    detected_date: Jan 20
+    severity: high
+    first_patched: 5.0.12
