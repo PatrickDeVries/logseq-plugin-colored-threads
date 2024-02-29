@@ -6,8 +6,8 @@ PatrickDeVries/logseq-plugin-colored-threads is built on the following main stac
 - [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - [TypeScript](http://www.typescriptlang.org) – Languages
 - [ESLint](http://eslint.org/) – Code Review
-- [Prettier](https://prettier.io/) – Code Review
 - [GitHub Actions](https://github.com/features/actions) – Continuous Integration
+- [Prettier](https://prettier.io/) – Code Review
 - [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
 
 Full tech stack [here](/techstack.md)
@@ -21,8 +21,8 @@ PatrickDeVries/logseq-plugin-colored-threads is built on the following main stac
 - <img width='25' height='25' src='https://img.stackshare.io/service/1209/javascript.jpeg' alt='JavaScript'/> [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/1612/bynNY5dJ.jpg' alt='TypeScript'/> [TypeScript](http://www.typescriptlang.org) – Languages
 - <img width='25' height='25' src='https://img.stackshare.io/service/3337/Q4L7Jncy.jpg' alt='ESLint'/> [ESLint](http://eslint.org/) – Code Review
-- <img width='25' height='25' src='https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg' alt='Prettier'/> [Prettier](https://prettier.io/) – Code Review
 - <img width='25' height='25' src='https://img.stackshare.io/service/11563/actions.png' alt='GitHub Actions'/> [GitHub Actions](https://github.com/features/actions) – Continuous Integration
+- <img width='25' height='25' src='https://img.stackshare.io/service/7035/default_66f265943abed56bcdbfca1c866a4261b1fbb063.jpg' alt='Prettier'/> [Prettier](https://prettier.io/) – Code Review
 - <img width='25' height='25' src='https://img.stackshare.io/service/21547/default_1aeac791cde11ff66cc0b20dcc6144eeb185c905.png' alt='Vite'/> [Vite](https://vitejs.dev/) – JS Build Tools / JS Task Runners
 
 Full tech stack [here](/techstack.md)
@@ -34,7 +34,7 @@ Full tech stack [here](/techstack.md)
 # Tech Stack File
 ![](https://img.stackshare.io/repo.svg "repo") [PatrickDeVries/logseq-plugin-colored-threads](https://github.com/PatrickDeVries/logseq-plugin-colored-threads)![](https://img.stackshare.io/public_badge.svg "public")
 <br/><br/>
-|14<br/>Tools used|01/11/24 <br/>Report generated|
+|14<br/>Tools used|02/29/24 <br/>Report generated|
 |------|------|
 </div>
 
@@ -124,7 +124,7 @@ Full tech stack [here](/techstack.md)
 |[concurrently](https://www.npmjs.com/concurrently)|v8.2.2|12/25/23|Patrick DeVries |MIT|N/A|
 |[eslint-plugin-import](https://www.npmjs.com/eslint-plugin-import)|v2.29.1|12/25/23|Patrick DeVries |MIT|N/A|
 |[process](https://www.npmjs.com/process)|v0.11.10|11/14/23|Patrick DeVries |MIT|N/A|
-|[vite](https://www.npmjs.com/vite)|v5.0.10|12/25/23|Patrick DeVries |N/A|N/A|
+|[vite](https://www.npmjs.com/vite)|v5.0.10|12/25/23|Patrick DeVries |N/A|[CVE-2024-23331](https://github.com/advisories/GHSA-c24v-8rfc-w8vw) (High)|
 
 <br/>
 <div align='center'>
