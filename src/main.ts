@@ -1,4 +1,5 @@
 import '@logseq/libs'
+
 import { logseq as PL } from '../package.json'
 
 enum Mode {
@@ -32,11 +33,8 @@ const onSettingsChange = () => {
 
   let providedStyles: string
 
-  const vars: [string, string][] = colors.map((color, i) => [
-    `--block-thread-color-level-${i + 1}`,
-    color,
-  ])
-  const varsString = vars.map(pair => pair.join(': ') + ';').join('\n')
+  const vars: string[] = colors.map((color, i) => `--block-thread-color-level-${i + 1}: ${color};`)
+  const varsString = vars.join('\n')
   providedStyles = `:root { ${varsString} }`
 
   if (shouldColorThreads.length > 0) {
@@ -148,15 +146,66 @@ const onSettingsChange = () => {
       ${Array.from(
         { length: maxDepth },
         (_, i) => `
-        ${contentModeSelector} .ls-block[level="${i + 1}"] .bullet-container .bullet {
+          ${contentModeSelector} .ls-block[level="${i + 1}"] .bullet-container .bullet {
             background-color: var(--block-thread-color-level-${(i % colors.length) + 1});
+            opacity: 1;
           }
         `,
       ).join('\n')}
     `
+    const colorOrderedListStyles = `
+    ${Array.from({ length: maxDepth }, (_, i) =>
+      i === 0
+        ? `
+          ${contentModeSelector} .ls-block[level="${
+            i + 1
+          }"] .bullet-container.as-order-list .bullet {
+            color: var(--block-thread-color-level-${(i % colors.length) + 1});
+            background-color: transparent;
+          }
+      `
+        : `
+          ${contentModeSelector} .ls-block[level="${
+            i + 1
+          }"] .bullet-container.as-order-list .bullet {
+            position: relative;
+            z-index: 1;
+            
+            color: var(--block-thread-color-level-${(i % colors.length) + 1});
+            background-color: transparent;
+
+            border-radius: 0;
+
+
+            &::before {
+              content: '';
+
+              z-index: -1;
+
+              position: absolute;
+              
+              top: -2px;
+              left: calc(50% - 2px);
+              
+              height: calc(100% + 4px);
+              width: 12px;
+              transform: translateX(-100%);
+
+              background-color: var(--ls-primary-background-color);
+
+              border: 1px solid var(--block-thread-color-level-${(i % colors.length) + 1});
+              border-right: 0;
+              border-radius: 13px 0 0 13px
+            }
+          }
+       `,
+    ).join('\n')}
+    `
+
     providedStyles = `
       ${providedStyles}
       ${colorBulletsStyles}
+      ${colorOrderedListStyles}
     `
   }
 
